@@ -6,6 +6,7 @@ import {
   KeyIcon,
   ExclamationCircleIcon,
 } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from './button';
 import { useFormState, useFormStatus } from 'react-dom';
@@ -33,6 +34,7 @@ export default function LoginForm() {
                 id="email"
                 type="email"
                 name="email"
+                autoComplete="username"
                 placeholder="Enter your email address"
                 required
               />
@@ -51,6 +53,7 @@ export default function LoginForm() {
                 id="password"
                 type="password"
                 name="password"
+                autoComplete="current-password"
                 placeholder="Enter password"
                 required
                 minLength={6}
@@ -60,6 +63,9 @@ export default function LoginForm() {
           </div>
         </div>
         <LoginButton />
+        <Link href="/signup">
+          <Button className="mt-4 w-full">Create Account</Button>
+        </Link>
         <div
           className="flex h-8 items-end space-x-1"
           aria-live="polite"

@@ -56,7 +56,7 @@ export default function EditInvoiceForm({
                   {error}
                 </p>
               ))}
-          </div>{' '}
+          </div>
         </div>
 
         {/* Invoice Amount */}
